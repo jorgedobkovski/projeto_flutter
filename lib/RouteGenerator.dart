@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:projeto_simples_em_flutter/views/Formulario.dart';
 import 'package:projeto_simples_em_flutter/views/Index.dart';
 import 'package:projeto_simples_em_flutter/views/JokenPo.dart';
+import 'package:projeto_simples_em_flutter/views/Pokedex.dart';
+import 'package:projeto_simples_em_flutter/views/PokemonSearchPage.dart';
 
 class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
@@ -18,6 +20,14 @@ class RouteGenerator{
       case "/form":
         return MaterialPageRoute(
             builder: (_) => Formulario()
+        );
+      case "/pokedex":
+        return MaterialPageRoute(
+            builder: (_) => Pokedex()
+        );
+      case "/searchpokemons":
+        return MaterialPageRoute(
+            builder: (_) => PokemonSearchPage()
         );
       default:
         return _erroRota();

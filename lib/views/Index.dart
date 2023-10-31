@@ -63,6 +63,30 @@ class _IndexState extends State<Index> {
                       ),
                     ),
                   ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, "/pokedex");
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.red),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                          child: Text(
+                            "ACESSAR API POKEDEX",
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
